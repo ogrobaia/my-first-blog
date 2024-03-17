@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-fag2+9)v3xyls#8q#ckkei!6va1^de#jpc87b(#0c98v4sa(b4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'kobaia.pythonanywhere.com']
+
 
 
 # Application definition
@@ -125,3 +126,6 @@ STATIC_ROOT = BASE_DIR / 'static'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = Path(BASE_DIR / 'media')
