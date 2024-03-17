@@ -1,6 +1,9 @@
-from django.urls import path
-from . import views
+from django.conf.urls import patterns,include, url
+from django.contrib import admin
 
 urlpatterns = [
-    path('', views.post_urls, name='post_list')
+
+    url(r'^admin/',include(admin.site.urls)),
+    url(r'^$', 'web.views.homepage', name="index"),
+
 ]
