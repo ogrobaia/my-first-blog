@@ -105,11 +105,13 @@
     </nav>
     <section>
         {% for post in posts %}
-        <article>
-            <h2>{{ post.title }}</h2>
-            <p>Publicado em: {{ post.published_date }}</p>
-            <p>{{ post.text }}</p>
-        </article>
+            {% if post.published_date %}
+            <article>
+                <h2>{{ post.title }}</h2>
+                <p>Publicado em: {{ post.published_date }}</p>
+                <p>{{ post.text }}</p>
+            </article>
+            {% endif %}
         {% endfor %}
     </section>
 </body>
