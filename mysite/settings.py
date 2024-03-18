@@ -27,11 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'kobaia.pythonanywhere.com']
 
-<<<<<<< HEAD
+
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'kobaia.pythonanywhere.com']
 
-=======
->>>>>>> 780d582593c5b77b86b1dfe0d2531c02a8b21fbb
 
 
 # Application definition
