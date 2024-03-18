@@ -1,4 +1,4 @@
-#!/home/ogrobaia/projetos/djangogirls/myvenv/bin/python
+#!/home/daniel/PROJETOS/my-first-blog/myvenv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
