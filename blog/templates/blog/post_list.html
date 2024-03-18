@@ -17,19 +17,26 @@
 
         /* Estilos do cabeçalho */
         header {
-            background-color: #333;
+            background-image: url('caminho/para/sua/imagem.jpg'); /* Adicione uma imagem de fundo ao cabeçalho */
+            background-size: cover;
             color: #fff;
-            padding: 20px;
+            padding: 50px 20px; /* Aumente o espaçamento interno */
             text-align: center;
         }
 
         header h1 {
             margin: 0;
+            font-size: 36px; /* Aumente o tamanho da fonte */
+        }
+
+        header h2 {
+            margin: 10px 0;
+            font-size: 24px; /* Aumente o tamanho da fonte */
         }
 
         /* Estilos da navegação */
         nav {
-            background-color: #fff;
+            background-color: #333; /* Mude a cor de fundo */
             padding: 10px;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -38,13 +45,13 @@
         nav a {
             margin: 0 10px;
             text-decoration: none;
-            color: #333;
+            color: #fff; /* Mude a cor dos links */
             font-weight: bold;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #555;
+            color: #ffd700; /* Mude a cor ao passar o mouse */
         }
 
         /* Estilos da seção de posts */
@@ -97,16 +104,13 @@
         <a href="#">Contato</a>
     </nav>
     <section>
+        {% for post in posts %}
         <article>
-            <h2>Aprendendo a Aprender</h2>
-            <p>Publicado em: 17 de Março de 2024</p>
-            <p></p>
+            <h2>{{ post.title }}</h2>
+            <p>Publicado em: {{ post.published_date }}</p>
+            <p>{{ post.text }}</p>
         </article>
-        <article>
-            <h2>Ultra Aprendizado</h2>
-            <p>Publicado em: 18 de Março de 2024</p>
-            <p></p>
-        </article>
+        {% endfor %}
     </section>
 </body>
 </html>
